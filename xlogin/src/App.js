@@ -35,13 +35,15 @@ function App() {
             <div className="form">
               <label htmlFor="username">
                 Username: {" "}
-                <input id="username" onChange={(e) => setUsername(e.target.value)} name="username" type="text" placeholder='username' value={username} required/>
+                <input id="username" onChange={(e) => setUsername(e.target.value)} name="username" type="text" placeholder='username' value={username} required />
               </label>
               <label htmlFor="password">
                 Password: {" "}
-                <input id="password" onChange={(e) => setPassword(e.target.value)} name="password" type="password" placeholder='password' value={password} required/>
+                <input id="password" onChange={(e) => setPassword(e.target.value)} name="password" type="password" placeholder='password' value={password} required />
               </label>
-              <button type='submit'>Submit</button>
+              <div>
+                <button type='submit'>Submit</button>
+              </div>
             </div>
           </form>
         )
