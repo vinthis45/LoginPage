@@ -1,4 +1,3 @@
-
 import './App.css';
 import React, { useState } from "react";
 
@@ -8,7 +7,6 @@ function App() {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [isSubmitted, setIsSubmitted] = useState(false);
-
 
   const submitHandler = (e) => {
     e.preventDefault();
@@ -41,14 +39,30 @@ function App() {
             <div className="form">
               <label htmlFor="username">
                 Username: {" "}
-                <input id="username" onChange={(e) => setUsername(e.target.value)} name="username" type="text" placeholder='username' value={username} required />
+                <input
+                  id="username"
+                  name="username"
+                  type="text"
+                  placeholder="username"
+                  value={username}
+                  onChange={(e) => setUsername(e.target.value)}
+                  required
+                />
               </label>
               <label htmlFor="password">
                 Password: {" "}
-                <input id="password" onChange={(e) => setPassword(e.target.value)} name="password" type="password" placeholder='password' value={password} required />
+                <input
+                  id="password"
+                  name="password"
+                  type="password"
+                  placeholder="password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  required
+                />
               </label>
               <div>
-                <button type='submit'>Submit</button>
+                <button type="submit">Submit</button>
               </div>
             </div>
           </form>
