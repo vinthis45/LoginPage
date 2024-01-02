@@ -11,15 +11,21 @@ function App() {
 
 
   const submitHandler = (e) => {
-    e.preventDefault(e);
-    if (username === "user" && password === "password") {
+    e.preventDefault();
+    if (username.trim() === "") {
+      setError("Please enter a username.");
+      setIsSubmitted(false);
+    } else if (password.trim() === "") {
+      setError("Please enter a password.");
+      setIsSubmitted(false);
+    } else if (username === "user" && password === "password") {
       setError("");
       setIsSubmitted(true);
     } else {
       setError("Invalid username or password");
       setIsSubmitted(false);
     }
-  }
+  };
 
   return (
     <div className="App">
@@ -31,7 +37,7 @@ function App() {
           </div>
         ) : (
           <form onSubmit={submitHandler} >
-            {error && <p className='error'>{error}</p>}
+            {error && <p className="error">{error}</p>}
             <div className="form">
               <label htmlFor="username">
                 Username: {" "}
